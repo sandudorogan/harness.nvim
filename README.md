@@ -1,5 +1,7 @@
 # nvim-harness
 
+[![CI](https://github.com/sandudorogan/harness.nvim/actions/workflows/ci.yml/badge.svg)](https://github.com/sandudorogan/harness.nvim/actions/workflows/ci.yml)
+
 Neovim UI for agent sessions plus a persistent local daemon **`harnessd`** (Bun/TypeScript). The plugin talks to `harnessd` over a framed JSON protocol on localhost TCP; **it does not invoke provider CLIs directly** in v1. The daemon owns subprocesses, SQLite persistence, and normalized events for sessions, tools, approvals, and file-level diffs.
 
 **v1 providers**
