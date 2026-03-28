@@ -145,9 +145,27 @@ After installing (see above), the following commands are available:
 
 When an approval prompt is open, keys **`1`–`4`** map to allow once, allow always, reject once, reject always. When a diff review is open, **`F9`** / **`F10`** accept or reject the proposal; **`F11`** closes without applying (`lua/nvim-harness/ui/diff.lua`).
 
+## Acknowledgements
+
+This project borrows ideas and, where noted, code from:
+
+- [t3code](https://github.com/nicholasgriffintn/t3code) — architecture patterns for runtime contracts, provider management, session/event persistence, and the Codex adapter. MIT-licensed; reused selectively per `PLAN.md`.
+- [claudecode.nvim](https://github.com/greggh/claudecode.nvim) — model for the file-level diff review UX (simplicity over per-hunk complexity).
+- [avante.nvim](https://github.com/yetone/avante.nvim) — referenced as a design counterpoint for diff granularity decisions.
+
+Provider integrations wrap:
+
+- [Codex](https://github.com/openai/codex) (`codex app-server` stdio)
+- [OpenCode](https://github.com/opencode-ai/opencode) (`opencode acp` stdio, experimental)
+
+Plugin dependencies:
+
+- [nui.nvim](https://github.com/MunifTanjim/nui.nvim) — UI layout and popups
+- [plenary.nvim](https://github.com/nvim-lua/plenary.nvim) — test runner (dev only)
+
 ## Docs
 
-- `PLAN.md` — v1 plan and task order  
-- `docs/architecture.md` — daemon rationale, providers, deferred scope, adapters  
-- `docs/local-protocol.md` — wire format and envelopes  
-- `docs/testing.md` — automated commands, manual smoke checklist, release gate  
+- `PLAN.md` — v1 plan and task order
+- `docs/architecture.md` — daemon rationale, providers, deferred scope, adapters
+- `docs/local-protocol.md` — wire format and envelopes
+- `docs/testing.md` — automated commands, manual smoke checklist, release gate
